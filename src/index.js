@@ -1,5 +1,5 @@
 import './style.css';
+import { displayHomePage } from './home';
 
- lucide.createIcons();
-
-console.log('Hello World!');
+lucide.createIcons();
+displayHomePage();
