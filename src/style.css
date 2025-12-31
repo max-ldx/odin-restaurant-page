@@ -8,9 +8,8 @@
 body {
     height: 100vh;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: #3F5EFB;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 nav {
@@ -32,10 +31,68 @@ nav {
     &>ul>li>a {
         display: flex;
         align-items: end;
+        text-decoration: none;
+        gap: .25rem;
+        color: oklch(1 0 0);
     }
+}
+
+h1 {
+    text-align: center;
+    color: oklch(1 0 0);
 }
 
 p {
     max-width: 60ch;
     text-wrap: pretty;
+    color: oklch(1 0 0);
+}
+
+#content {
+    display: grid;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    width: 70vw;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 500px);
+    gap: 2rem;
+}
+
+.card {
+    height: 350px;
+    border-radius: calc(1rem + .5rem);
+    padding: .5rem;
+    box-shadow: 0 4px 8px 0 oklch(0 0 0 / 20%);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: grid;
+    color: oklch(1 0 0);
+
+    & .card-image-container {
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    & .card-image-container>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & h2,
+    p {
+        margin: 0;
+    }
+
+    & p {
+        box-sizing: content-box;
+        height: 3lh;
+    }
 }
