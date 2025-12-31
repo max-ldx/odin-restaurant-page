@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    padding: 2rem;
+
+    &>ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    &>ul>li {
+        list-style-type: none;
+    }
+
+    &>ul>li>a {
+        display: flex;
+        align-items: end;
+    }
+}
